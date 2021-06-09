@@ -1,0 +1,87 @@
+body {
+	margin: 0;
+}
+
+.content {
+	width: 500px;
+	border: 2px dashed;
+	height: 500px;
+	margin: 50px auto 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+.content img {
+	width: 170px;
+}
+.bar {
+	position: absolute;
+	width: 100%;
+	border-bottom: 1px dashed #f00;
+}
+
+.content .control {
+	position: absolute;
+	bottom: 5px;
+}
+.content .computer img{
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+}
+
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	min-width: 40px;
+	margin: 0 5px;
+	border-radius: 3px;
+	border: 2px solid transparent;
+	box-sizing: border-box;
+}
+
+button.active {
+	font-weight: bold;
+	border-color: #ff8500;
+}
+
+.header {
+	text-align: center;
+}
+
+div.dialog[data-unique='dialog'] {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+div.dialog[data-unique='dialog'] > div {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	background: lightblue;
+	align-items: center;
+	width: 300px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+div.dialog[data-unique='dialog'] > div span {
+	max-width: 100%;
+	margin: 10px 0;
+	font-size: 1.2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
